@@ -105,8 +105,6 @@ theme: oranges
 deploy:
   type: git
   repo: https://github.com/leedom92/blog.git
-  brancdh: gh-pages
-  token: 5c6a12f36a27492ff0edc02677805a942faf537a
 
 # Search
 search:
