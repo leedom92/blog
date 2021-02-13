@@ -104,7 +104,7 @@ theme: oranges
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: git@github.com:leedom92/blog.git
+  repo: https://github.com/leedom92/blog.git
 
 # Search
 search:
