@@ -25,7 +25,11 @@ const app = {
 Vue.createApp(app).mount('#app')
 ```
 
-<p class='codepen' data-height='300' data-theme-id='0' data-default-tab='js,result' data-lazy='true' data-editable='true' data-slug-hash='MWbEJjj'></p>
+<p class='codepen' data-height='300' data-theme-id='dark' data-preview='true' data-default-tab='js,result' data-lazy='true' data-editable='true' data-slug-hash='MWbEJjj'>
+  <span>See the Pen <a href='https://codepen.io/leedom92/pen/MWbEJjj'>
+  MWbEJjj</a> by leedom92 (<a href='https://codepen.io/leedom92'>@leedom92</a>)
+  on <a href='https://codepen.io'>CodePen</a>.</span>
+</p>
 <script async src='https://static.codepen.io/assets/embed/ei.js'></script>
 
 ## vue 2.0
@@ -46,4 +50,8 @@ const app = new Vue({
 })
 ```
 
-<p class='codepen' data-height='300' data-theme-id='0' data-default-tab='js,result' data-editable='true' data-slug-hash='mdOBmwp'></p>
+<p class='codepen' data-height='300' data-theme-id='dark' data-preview='true' data-default-tab='js,result' data-editable='true' data-slug-hash='mdOBmwp'>
+  <span>See the Pen <a href='https://codepen.io/leedom92/pen/mdOBmwp'>
+  mdOBmwp</a> by leedom92 (<a href='https://codepen.io/leedom92'>@leedom92</a>)
+  on <a href='https://codepen.io'>CodePen</a>.</span>
+</p>
