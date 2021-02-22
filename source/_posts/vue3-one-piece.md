@@ -5,7 +5,7 @@ date: 2021-02-13 23:21:44
 
 ![vue3.0](vue3-one-piece.png)
 
-## start
+## example
 
 ```html
 <div id="app">
@@ -24,3 +24,26 @@ const app = {
 
 Vue.createApp(app).mount('#app')
 ```
+
+<p class='codepen' data-height='300' data-theme-id='0' data-default-tab='js,result' data-lazy='true' data-editable='true' data-slug-hash='MWbEJjj'></p>
+<script async src='https://static.codepen.io/assets/embed/ei.js'></script>
+
+## vue 2.0
+
+```html
+<div id="app">
+  <h1>{{ name }}</h1>
+</div>
+```
+
+
+```js
+const app = new Vue({
+  el: '#app',
+  data: {
+    name: 'leedom'
+  }
+})
+```
+
+<p class='codepen' data-height='300' data-theme-id='0' data-default-tab='js,result' data-editable='true' data-slug-hash='mdOBmwp'></p>
