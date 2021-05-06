@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>LEEDOM</title>
+  
+  
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2021-05-06T02:48:10.228Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>LEEDOM</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>some problems of vue-amap</title>
+    <link href="http://example.com/2021/05/06/some-problems-of-vue-amap/"/>
+    <id>http://example.com/2021/05/06/some-problems-of-vue-amap/</id>
+    <published>2021-05-06T02:00:26.000Z</published>
+    <updated>2021-05-06T02:48:10.228Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="vue-amap的一些注意点"><a href="#vue-amap的一些注意点" class="headerlink" title="vue-amap的一些注意点"></a>vue-amap的一些注意点</h2><blockquote><p><strong>‘AMap’ is not defined.</strong></p></blockquote><p>在.eslintrc.js中添加如下配置：</p><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">globals: &#123;</span><br><span class="line">  AMap: <span class="literal">true</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><blockquote><p><strong>实时监听zoom参数变化</strong></p></blockquote><p>利用ref获取地图实例，调取getZoom方法</p><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;el-amap</span><br><span class="line">  ref=<span class="string">&quot;map&quot;</span></span><br><span class="line">  vid=<span class="string">&quot;amapDemo&quot;</span></span><br><span class="line">  :amap-manager=<span class="string">&quot;amapManager&quot;</span></span><br><span class="line">  :zoom=<span class="string">&quot;zoom&quot;</span></span><br><span class="line">  :center=<span class="string">&quot;center&quot;</span></span><br><span class="line">  :plugin=<span class="string">&quot;plugin&quot;</span></span><br><span class="line">  :events=<span class="string">&quot;events&quot;</span></span><br><span class="line">  <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;amap-demo&quot;</span></span><br><span class="line">/&gt;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">data</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    events: &#123;</span><br><span class="line">      zoomchange: <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">// 更新当前地图实例zoom</span></span><br><span class="line">        <span class="built_in">this</span>.zoom = <span class="built_in">this</span>.$refs[<span class="string">&#x27;map&#x27;</span>].$$getInstance().getZoom()</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;vue-amap的一些注意点&quot;&gt;&lt;a href=&quot;#vue-amap的一些注意点&quot; class=&quot;headerlink&quot; title=&quot;vue-amap的一些注意点&quot;&gt;&lt;/a&gt;vue-amap的一些注意点&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;‘</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>take good care of your health</title>
+    <link href="http://example.com/2021/03/06/take-good-care-of-your-health/"/>
+    <id>http://example.com/2021/03/06/take-good-care-of-your-health/</id>
+    <published>2021-03-05T16:28:12.000Z</published>
+    <updated>2021-03-07T13:39:37.427Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>人在将要走的那一刻，是知道自己要走了</strong></p><p>这几天达叔走了的新闻报道铺天盖地，抖音上也满是缅怀。 </p><p>人真的太脆弱了！</p><p>前几天傍晚下班后忽然感觉颈椎一阵难受，乏力嗜睡。想起经常刷视频看到颈椎病严重的会导致瘫痪，令人心惊胆战。</p><p>年轻时透支身体是不明之举，不科学的生活习惯是慢性毒药。寰宇之内仍有很多未解之谜待拨云见日，历史正等着人们一笔一笔去书写。</p><p>宇宙还在膨胀中，科学的操弄者究竟是不是菩萨神仙？</p><p>台湾问题在历史长河之中，将流淌到何处？</p><p>……</p><p>看到一句评论：</p><blockquote><p>人在将要走的那一刻，是知道自己要走了</p></blockquote><p>人在弥留之际，最后的思绪到底会是什么？这个疑问让我惊出一身冷汗！</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;人在将要走的那一刻，是知道自己要走了&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这几天达叔走了的新闻报道铺天盖地，抖音上也满是缅怀。 &lt;/p&gt;
+&lt;p&gt;人真的太脆弱了！&lt;/p&gt;
+&lt;p&gt;前几天傍晚下班后忽然感觉颈椎一阵难受，乏力嗜睡。想起经常刷视频看到颈椎病严重的会导致瘫</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hi, Mom</title>
+    <link href="http://example.com/2021/02/18/movie-hi-mom/"/>
+    <id>http://example.com/2021/02/18/movie-hi-mom/</id>
+    <published>2021-02-18T08:55:44.000Z</published>
+    <updated>2021-03-07T13:40:14.318Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>在人类的所有情感中，我认为亲情是最纯粹的。</strong></p><p>在假期的尾声，我兴致勃勃地赶去看了这部被全网炒得火热的贺岁片<a href="https://movie.douban.com/subject/34841067/">《你好，李焕英》</a>。然而，梦享城水泄不通的停车场成功让我错过了开场前5分钟。</p><h3 id="《亲情》罗文"><a href="#《亲情》罗文" class="headerlink" title="《亲情》罗文"></a><strong><a href="https://music.163.com/#/song?id=113237">《亲情》</a>罗文</strong></h3><blockquote><p>问世上有几多爱</p><p>流露无限美善</p><p>象世间舐犊情深</p><p>永不改变</p><p>令我面对一切</p><p>回复无尽信念</p><p>人类亲情中</p><p>系有真爱见</p><p>日日夜夜献种种关怀</p><p>亲情无处不现</p><p>就象春风吹遍身心</p><p>去我满怀倦</p><p>俗世幸有这种爱</p><p>流露人类至善</p><p>能在这哀乐人生</p><p>令我心内暖</p></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;在人类的所有情感中，我认为亲情是最纯粹的。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在假期的尾声，我兴致勃勃地赶去看了这部被全网炒得火热的贺岁片&lt;a href=&quot;https://movie.douban.com/subject/34841067/&quot;&gt;《你好，李焕英》</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Valentine</title>
+    <link href="http://example.com/2021/02/14/valentine/"/>
+    <id>http://example.com/2021/02/14/valentine/</id>
+    <published>2021-02-14T15:39:44.000Z</published>
+    <updated>2021-02-21T06:33:22.477Z</updated>
+    
+    <content type="html"><![CDATA[<p>Valentine’s Day is a western festival, should we pay attention to it? </p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Valentine’s Day is a western festival, should we pay attention to it? &lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Vue 3.0 &quot;one piece&quot;</title>
+    <link href="http://example.com/2021/02/13/vue3-one-piece/"/>
+    <id>http://example.com/2021/02/13/vue3-one-piece/</id>
+    <published>2021-02-13T15:21:44.000Z</published>
+    <updated>2021-02-23T15:47:48.494Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/2021/02/13/vue3-one-piece/vue3-one-piece.png" alt="vue3.0"></p><h2 id="example"><a href="#example" class="headerlink" title="example"></a>example</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">h1</span>&gt;</span>&#123;&#123; name &#125;&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> app = &#123;</span><br><span class="line">  <span class="function"><span class="title">data</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      name: <span class="string">&#x27;leedom&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Vue.createApp(app).mount(<span class="string">&#x27;#app&#x27;</span>)</span><br></pre></td></tr></table></figure><p class='codepen' data-height='300' data-theme-id='dark' data-preview='true' data-default-tab='result' data-lazy='true' data-editable='true' data-slug-hash='MWbEJjj'>  <span>See the Pen <a href='https://codepen.io/leedom92/pen/MWbEJjj'>  MWbEJjj</a> by leedom92 (<a href='https://codepen.io/leedom92'>@leedom92</a>)  on <a href='https://codepen.io'>CodePen</a>.</span></p><script async src='https://static.codepen.io/assets/embed/ei.js'></script><h2 id="vue-2-0"><a href="#vue-2-0" class="headerlink" title="vue 2.0"></a>vue 2.0</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">h1</span>&gt;</span>&#123;&#123; name &#125;&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> app = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">&#x27;#app&#x27;</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    name: <span class="string">&#x27;leedom&#x27;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><p class='codepen' data-height='300' data-theme-id='dark' data-preview='true' data-default-tab='result' data-editable='true' data-slug-hash='mdOBmwp'>  <span>See the Pen <a href='https://codepen.io/leedom92/pen/mdOBmwp'>  mdOBmwp</a> by leedom92 (<a href='https://codepen.io/leedom92'>@leedom92</a>)  on <a href='https://codepen.io'>CodePen</a>.</span></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/2021/02/13/vue3-one-piece/vue3-one-piece.png&quot; alt=&quot;vue3.0&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;example&quot;&gt;&lt;a href=&quot;#example&quot; class=&quot;headerlink&quot; title=&quot;</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Happy New Year</title>
+    <link href="http://example.com/2021/02/12/happy-new-year/"/>
+    <id>http://example.com/2021/02/12/happy-new-year/</id>
+    <published>2021-02-12T15:55:44.000Z</published>
+    <updated>2021-03-03T05:32:30.259Z</updated>
+    
+    <content type="html"><![CDATA[<p>Happy New Year! Wish everthing goes better and better!</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Happy New Year! Wish everthing goes better and better!&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
