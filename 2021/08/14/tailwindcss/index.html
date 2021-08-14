@@ -11,7 +11,7 @@
   
   <title>
     
-      archive_a: 2021 
+      tailwindcss 
       
       
     
@@ -33,6 +33,10 @@
 
 
   
+
+  
+    
+<link rel="stylesheet" href="/css/post.css">
 
   
 
@@ -75,101 +79,43 @@
 
 
       <div class="main">
-        <!-- 归档页，展示本站所有文章，按照年份降序归类，url形式：https://yoursite/archives/ -->
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
-<!-- last: 按年份把文章分组，当前遍历到的年份 -->
-<!-- now: 当前遍历到的文章的发布年份 -->
+<!-- LaTex Display -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    }
+  };
+</script>
 
-<div class="container archives">
-  <div class="post-list">
-    
-        <!-- 后续文章的发布年份呈现 -->
-        <div class="content-title">
-          <h2>
-            <span>2021</span>
-          </h2>
-        </div>
-      
-      <div class="post-item" title="tailwindcss">
-        <div class="time-m-d">08-14</div>
-        <div class="title">
-          <a href="/2021/08/14/tailwindcss/">
-            
-              <span>tailwindcss</span>
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="some problems of vue-amap">
-        <div class="time-m-d">05-06</div>
-        <div class="title">
-          <a href="/2021/05/06/some-problems-of-vue-amap/">
-            
-              <span>some problems of vue-amap</span>
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="take good care of your health">
-        <div class="time-m-d">03-06</div>
-        <div class="title">
-          <a href="/2021/03/06/take-good-care-of-your-health/">
-            
-              <span>take good care of your health</span>
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="Hi, Mom">
-        <div class="time-m-d">02-18</div>
-        <div class="title">
-          <a href="/2021/02/18/movie-hi-mom/">
-            
-              <span>Hi, Mom</span>
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="Valentine">
-        <div class="time-m-d">02-14</div>
-        <div class="title">
-          <a href="/2021/02/14/valentine/">
-            
-              <span>Valentine</span>
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="Vue 3.0 "one piece"">
-        <div class="time-m-d">02-13</div>
-        <div class="title">
-          <a href="/2021/02/13/vue3-one-piece/">
-            
-              <span>Vue 3.0 "one piece"</span>
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="Happy New Year">
-        <div class="time-m-d">02-12</div>
-        <div class="title">
-          <a href="/2021/02/12/happy-new-year/">
-            
-              <span>Happy New Year</span>
-            
-          </a>
-        </div>
-      </div>
-    
+<div class="post">
+  <h3 class="date">
+    Aug 14, 2021
+  </h3>
+  <h1>
+    tailwindcss
+  </h1>
+  <div class="content markdown-body">
+    <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 安装tailwindcss postcss autoprefixer</span></span><br><span class="line"><span class="comment"># vanilla</span></span><br><span class="line">$ npm install -D tailwindcss postcss-cli autoprefixer</span><br><span class="line"><span class="comment"># vue</span></span><br><span class="line">$ npm install -D tailwindcss postcss autoprefixer</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 生成tailwindcss和postcss配置文件</span></span><br><span class="line">$ npx tailwindcss init -p</span><br></pre></td></tr></table></figure>
+<h2 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*  </span></span><br><span class="line"><span class="comment">  在项目资源目录下新建css文件，引入tailwindcss三大部件</span></span><br><span class="line"><span class="comment">  ./your-css-folder/styles.css</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">@tailwind</span> base;</span><br><span class="line"><span class="keyword">@tailwind</span> components;</span><br><span class="line"><span class="keyword">@tailwind</span> utilities;</span><br></pre></td></tr></table></figure>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 配置tailwindcss.config.js</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  <span class="comment">// 去除项目中没有用到的tailwindcss的css样式</span></span><br><span class="line">  purge: [</span><br><span class="line">    <span class="comment">/* vue项目 */</span></span><br><span class="line">    <span class="string">&#x27;./dist/index.html&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;./src/**/*.&#123;vue,js,ts,jsx,tsx&#125;&#x27;</span></span><br><span class="line">  ],</span><br><span class="line">  darkMode: <span class="literal">false</span>, <span class="comment">// or &#x27;media&#x27; or &#x27;class&#x27;</span></span><br><span class="line">  theme: &#123;</span><br><span class="line">    <span class="comment">// 扩展自定义配置，不会覆盖tailwindcss原有样式</span></span><br><span class="line">    extend: &#123;</span><br><span class="line">      flex: &#123;</span><br><span class="line">        <span class="string">&#x27;2&#x27;</span>: <span class="string">&#x27;2 2 0%&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;3&#x27;</span>: <span class="string">&#x27;3 3 0%&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;4&#x27;</span>: <span class="string">&#x27;4 4 0%&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;5&#x27;</span>: <span class="string">&#x27;5 5 0%&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;8&#x27;</span>: <span class="string">&#x27;8 8 0%&#x27;</span></span><br><span class="line">      &#125;,</span><br><span class="line">      fontSize: &#123;</span><br><span class="line">        <span class="string">&#x27;fs12&#x27;</span>: <span class="string">&#x27;12px&#x27;</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  variants: &#123;</span><br><span class="line">    extend: &#123;&#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  plugins: [],</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="demo"><a href="#demo" class="headerlink" title="demo"></a>demo</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">h1</span> <span class="attr">class</span>=<span class="string">&quot;text-9xl text-center text-blue-600 sm:bg-black sm:text-white&quot;</span>&gt;</span>tailwindcss<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 可以使用@apply指令将所用到的功能类整合成一个自定义的类 */</span></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;h1 class=&quot;intro&quot;&gt;tailwindcss&lt;/h1&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@tailwind</span> base;</span><br><span class="line"><span class="keyword">@tailwind</span> components;</span><br><span class="line"><span class="keyword">@tailwind</span> utilities;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.intro</span> &#123;</span><br><span class="line">  <span class="keyword">@apply</span> text-<span class="number">9</span>xl text-center text-blue-<span class="number">600</span> <span class="attribute">sm</span>:bg-black <span class="attribute">sm</span>:text-white;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
   </div>
+  
+    
+      <a id="older" class="blog-nav" href="/2021/05/06/some-problems-of-vue-amap/">OLDER&nbsp;&gt;</a>
+      
+        
+            
 </div>
-
       </div>
 
       <div class="back-to-top hidden">
