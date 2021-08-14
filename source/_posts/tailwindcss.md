@@ -87,3 +87,18 @@ module.exports = {
   @apply text-9xl text-center text-blue-600 sm:bg-black sm:text-white;
 }
 ```
+
+## PostCSS 7 兼容性版本
+
+```bash
+# 从 v2.0 版本开始，Tailwind CSS 依赖于 PostCSS 8。由于 PostCSS 8 才使用了几个月，因此生态系统中的许多其他工具尚未更新，这意味着在安装 Tailwind，并尝试编译 CSS 时，您可能会在终端中看到这样的错误：
+
+$ Error: PostCSS plugin tailwindcss requires PostCSS 8.
+```
+
+```bash
+# 如果遇到上述错误，请卸载 Tailwind 并使用兼容性版本重新安装：
+
+$ npm uninstall tailwindcss postcss autoprefixer
+$ npm install tailwindcss@npm:@tailwindcss/postcss7-compat @tailwindcss/postcss7-compat postcss@^7 autoprefixer@^9
+```
