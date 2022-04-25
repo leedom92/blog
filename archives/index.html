@@ -67,6 +67,26 @@
       <i class="iconfont icon-github"></i>
     </a>
   
+    <a title="email" target="" href="">
+      <i class="iconfont icon-envelope"></i>
+    </a>
+  
+    <a title="facebook" target="" href="">
+      <i class="iconfont icon-facebooksquare"></i>
+    </a>
+  
+    <a title="twitter" target="" href="">
+      <i class="iconfont icon-twitter"></i>
+    </a>
+  
+    <a title="wechat" target="" href="">
+      <i class="iconfont icon-wechat"></i>
+    </a>
+  
+    <a title="weibo" target="" href="">
+      <i class="iconfont icon-weibo"></i>
+    </a>
+  
     <a title="rss" target="_blank" href="/atom.xml">
       <i class="iconfont icon-rss"></i>
     </a>
@@ -82,24 +102,6 @@
 
 <div class="container archives">
   <div class="post-list">
-    
-        <!-- 后续文章的发布年份呈现 -->
-        <div class="content-title">
-          <h2>
-            <span>2022</span>
-          </h2>
-        </div>
-      
-      <div class="post-item" title="self-criticism">
-        <div class="time-m-d">02-02</div>
-        <div class="title">
-          <a href="/2022/02/02/self-criticism/">
-            
-              <span>self-criticism</span>
-            
-          </a>
-        </div>
-      </div>
     
         <!-- 后续文章的发布年份呈现 -->
         <div class="content-title">
@@ -186,6 +188,22 @@
       </div>
     
   </div>
+</div>
+
+        <div class="footer">
+  
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/leedom92/hexo-theme-leedom">Copyright © Leedom 2021</a>
+        
+    </div>
+  
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/leedom92/hexo-theme-leedom">Theme by Leedom | Powered by Hexo</a>
+        
+    </div>
+  
 </div>
 
       </div>
@@ -335,7 +353,7 @@
               }
               // 0x05. show search results
               if (isMatch) {
-                str += "<li><a href='/" + data_url + "' class='search-result-title'><h2>" + orig_data_title + "</h2>";
+                str += "<li><a href='/" + data_url + "' class='search-result-title'><h2>" + orig_data_title + "</h2></a>";
                 var content = orig_data_content;
                 if (first_occur >= 0) {
                   // cut out 100 characters
@@ -362,7 +380,7 @@
                     match_content = match_content.replace(regS, "<span class=\"search-keyword\">" + keyword + "</span>");
                   });
 
-                  str += "<h3 class=\"search-result-abstract\">" + match_content + "...</h3></a>"
+                  str += "<h3 class=\"search-result-abstract\">" + match_content + "...</h3>"
                 }
                 str += "<hr></li>";
               }
