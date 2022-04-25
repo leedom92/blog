@@ -214,6 +214,7 @@ pre .xml .cdata {
   font-style: italic;
   line-height: 1.8em;
   color: #999;
+  margin: 0;
 }
 .post img {
   display: block;
