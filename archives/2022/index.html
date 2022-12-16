@@ -11,7 +11,7 @@
   
   <title>
     
-      Vue 3.0 &#34;one piece&#34; 
+      archive_a: 2022 
       
       
     
@@ -33,10 +33,6 @@
 
 
   
-
-  
-    
-<link rel="stylesheet" href="/css/post.css">
 
   
 
@@ -79,62 +75,119 @@
 
 
       <div class="main">
-        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
-<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
+        <!-- 归档页，展示本站所有文章，按照年份降序归类，url形式：https://yoursite/archives/ -->
 
-<!-- LaTex Display -->
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-</script>
-<script>
-  MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']]
-    }
-  };
-</script>
+<!-- last: 按年份把文章分组，当前遍历到的年份 -->
+<!-- now: 当前遍历到的文章的发布年份 -->
 
-<div class="post">
-  <h3 class="date">
-    Feb 13, 2021
-  </h3>
-  <h1>
-    Vue 3.0 "one piece"
-  </h1>
-  <div class="content markdown-body">
-    <p><img src="/2021/02/13/vue3-one-piece/vue3-one-piece.png" alt="vue3.0"></p>
-<h2 id="example"><a href="#example" class="headerlink" title="example"></a>example</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">h1</span>&gt;</span>&#123;&#123; name &#125;&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> app = &#123;</span><br><span class="line">  <span class="title function_">data</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      <span class="attr">name</span>: <span class="string">&#x27;leedom&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title class_">Vue</span>.<span class="title function_">createApp</span>(app).<span class="title function_">mount</span>(<span class="string">&#x27;#app&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<p class='codepen' data-height='300' data-theme-id='dark' data-preview='true' data-default-tab='result' data-lazy='true' data-editable='true' data-slug-hash='MWbEJjj'>
-  <span>See the Pen <a target="_blank" rel="noopener" href='https://codepen.io/leedom92/pen/MWbEJjj'>
-  MWbEJjj</a> by leedom92 (<a target="_blank" rel="noopener" href='https://codepen.io/leedom92'>@leedom92</a>)
-  on <a target="_blank" rel="noopener" href='https://codepen.io'>CodePen</a>.</span>
-</p>
-<script async src='https://static.codepen.io/assets/embed/ei.js'></script>
-
-<h2 id="vue-2-0"><a href="#vue-2-0" class="headerlink" title="vue 2.0"></a>vue 2.0</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">h1</span>&gt;</span>&#123;&#123; name &#125;&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> app = <span class="keyword">new</span> <span class="title class_">Vue</span>(&#123;</span><br><span class="line">  <span class="attr">el</span>: <span class="string">&#x27;#app&#x27;</span>,</span><br><span class="line">  <span class="attr">data</span>: &#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&#x27;leedom&#x27;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<p class='codepen' data-height='300' data-theme-id='dark' data-preview='true' data-default-tab='result' data-editable='true' data-slug-hash='mdOBmwp'>
-  <span>See the Pen <a target="_blank" rel="noopener" href='https://codepen.io/leedom92/pen/mdOBmwp'>
-  mdOBmwp</a> by leedom92 (<a target="_blank" rel="noopener" href='https://codepen.io/leedom92'>@leedom92</a>)
-  on <a target="_blank" rel="noopener" href='https://codepen.io'>CodePen</a>.</span>
-</p>
-
-  </div>
-  
+<div class="container archives">
+  <div class="post-list">
     
-      <a id="older" class="blog-nav" href="/2021/02/12/happy-new-year/">OLDER&nbsp;&gt;</a>
+        <!-- 后续文章的发布年份呈现 -->
+        <div class="content-title">
+          <h2>
+            <span>2022</span>
+          </h2>
+        </div>
       
-        
-          <a id="newer" class="blog-nav" href="/2021/02/14/valentine/">&lt;&nbsp;NEWER</a>
-          
+      <div class="post-item" title="covid-19">
+        <div class="time-m-d">12-16</div>
+        <div class="title">
+          <a href="/2022/12/16/covid-19/">
             
+              <span>covid-19</span>
+            
+          </a>
+        </div>
+      </div>
+    
+        <!-- 后续文章的发布年份呈现 -->
+        <div class="content-title">
+          <h2>
+            <span>2021</span>
+          </h2>
+        </div>
+      
+      <div class="post-item" title="tailwindcss">
+        <div class="time-m-d">08-14</div>
+        <div class="title">
+          <a href="/2021/08/14/tailwindcss/">
+            
+              <span>tailwindcss</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="some problems of vue-amap">
+        <div class="time-m-d">05-06</div>
+        <div class="title">
+          <a href="/2021/05/06/some-problems-of-vue-amap/">
+            
+              <span>some problems of vue-amap</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="take good care of your health">
+        <div class="time-m-d">03-06</div>
+        <div class="title">
+          <a href="/2021/03/06/take-good-care-of-your-health/">
+            
+              <span>take good care of your health</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="Hi, Mom">
+        <div class="time-m-d">02-18</div>
+        <div class="title">
+          <a href="/2021/02/18/movie-hi-mom/">
+            
+              <span>Hi, Mom</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="Valentine">
+        <div class="time-m-d">02-14</div>
+        <div class="title">
+          <a href="/2021/02/14/valentine/">
+            
+              <span>Valentine</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="Vue 3.0 "one piece"">
+        <div class="time-m-d">02-13</div>
+        <div class="title">
+          <a href="/2021/02/13/vue3-one-piece/">
+            
+              <span>Vue 3.0 "one piece"</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="Happy New Year">
+        <div class="time-m-d">02-12</div>
+        <div class="title">
+          <a href="/2021/02/12/happy-new-year/">
+            
+              <span>Happy New Year</span>
+            
+          </a>
+        </div>
+      </div>
+    
+  </div>
 </div>
+
       </div>
 
       <div class="back-to-top hidden">

@@ -50,7 +50,7 @@
 <script src="/js/fancybox.js"></script>
 
 
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="LEEDOM" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="LEEDOM" type="application/atom+xml">
 </head>
 
 
@@ -106,12 +106,13 @@
 <p><strong>‘AMap’ is not defined.</strong></p>
 </blockquote>
 <p>在.eslintrc.js中添加如下配置：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">globals: &#123;</span><br><span class="line">  AMap: <span class="literal">true</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="attr">globals</span>: &#123;</span><br><span class="line">  <span class="title class_">AMap</span>: <span class="literal">true</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <blockquote>
 <p><strong>实时监听zoom参数变化</strong></p>
 </blockquote>
 <p>利用ref获取地图实例，调取getZoom方法</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;el-amap</span><br><span class="line">  ref=<span class="string">&quot;map&quot;</span></span><br><span class="line">  vid=<span class="string">&quot;amapDemo&quot;</span></span><br><span class="line">  :amap-manager=<span class="string">&quot;amapManager&quot;</span></span><br><span class="line">  :zoom=<span class="string">&quot;zoom&quot;</span></span><br><span class="line">  :center=<span class="string">&quot;center&quot;</span></span><br><span class="line">  :plugin=<span class="string">&quot;plugin&quot;</span></span><br><span class="line">  :events=<span class="string">&quot;events&quot;</span></span><br><span class="line">  <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;amap-demo&quot;</span></span><br><span class="line">/&gt;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">data</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    events: &#123;</span><br><span class="line">      zoomchange: <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">// 更新当前地图实例zoom</span></span><br><span class="line">        <span class="built_in">this</span>.zoom = <span class="built_in">this</span>.$refs[<span class="string">&#x27;map&#x27;</span>].$$getInstance().getZoom()</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;el-amap</span><br><span class="line">  ref=<span class="string">&quot;map&quot;</span></span><br><span class="line">  vid=<span class="string">&quot;amapDemo&quot;</span></span><br><span class="line">  :amap-manager=<span class="string">&quot;amapManager&quot;</span></span><br><span class="line">  :zoom=<span class="string">&quot;zoom&quot;</span></span><br><span class="line">  :center=<span class="string">&quot;center&quot;</span></span><br><span class="line">  :plugin=<span class="string">&quot;plugin&quot;</span></span><br><span class="line">  :events=<span class="string">&quot;events&quot;</span></span><br><span class="line">  <span class="keyword">class</span>=<span class="string">&quot;amap-demo&quot;</span></span><br><span class="line">/&gt;</span><br><span class="line"></span><br><span class="line"><span class="title function_">data</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="attr">events</span>: &#123;</span><br><span class="line">      <span class="attr">zoomchange</span>: <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">// 更新当前地图实例zoom</span></span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">zoom</span> = <span class="variable language_">this</span>.<span class="property">$refs</span>[<span class="string">&#x27;map&#x27;</span>].$$getInstance().<span class="title function_">getZoom</span>()</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
   </div>
   
     
