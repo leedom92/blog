@@ -38,7 +38,7 @@ link:
   -
     name: github
     icon: github
-    path: https://github.com/leedom92/hexo-theme-leedom
+    path: https://github.com/leedom92
     target: _blank
   -
     # rss需安装 hexo-generator-feed 插件
